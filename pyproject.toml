@@ -1,0 +1,26 @@
+[project]
+name = "gene-ontology"
+version = "0.1.0"
+description = ""
+authors = [
+    {name = "Max Väistö",email = "max.vaisto@gmail.com"}
+]
+readme = "README.md"
+requires-python = "~=3.10"
+dependencies = [
+    "pandas (>=2.2.3,<3.0.0)",
+    "ruff (>=0.11.12,<0.12.0)",
+]
+
+
+[build-system]
+requires = ["poetry-core>=2.0.0,<3.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.ruff]
+line-length = 100          # formatter & E501 use this
+select      = ["E", "F"]    # enable whichever rules you like
+target-version = "py311"   # optional, for newer syntax
+
+[tool.ruff.format]          # (optional) formatter-only tweaks
+quote-style = "double"
